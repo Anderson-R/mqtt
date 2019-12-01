@@ -31,4 +31,3 @@ except KeyboardInterrupt:
 finally:
     unregisterMessage = 'DISCONECT'
     sensor.close()
-    pass
