@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                echo "first step of the build stage"
+                sh 'echo "first step of the build stage"'
             }
         }
     }
