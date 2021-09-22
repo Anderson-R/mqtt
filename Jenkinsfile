@@ -8,7 +8,9 @@ pipeline {
             }
         }
         stage('deploy') {
-            sh 'echo "this is the deploy stage"'
+            steps {
+                sh 'echo "this is the deploy stage"'
+            }
         }
     }
     post {
