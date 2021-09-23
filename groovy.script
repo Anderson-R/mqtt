@@ -1,0 +1,6 @@
+def build() {
+  sh 'python --version'
+  echo "Build: ${VERSION}-${TAG}"
+}
+
+return this
