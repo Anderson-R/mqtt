@@ -1,10 +1,14 @@
 pipeline {
     agent any
+    environment {
+        TAG = "dev_env"
+        VERSION = "1.1.1"
+    }
     stages {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'echo "here we go again"'
+                sh "Build: ${VERSION}-${TAG}"
             }
         }
         stage('deploy') {
