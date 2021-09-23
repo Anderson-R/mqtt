@@ -1,3 +1,5 @@
+def s
+
 pipeline {
     agent any
     environment {
@@ -5,10 +7,18 @@ pipeline {
         VERSION = "1.1.1"
     }
     stages {
+        stage("load") {
+            steps {
+                script {
+                    s = load "groovy.script"
+                }
+            }
+        }
         stage('build') {
             steps {
-                sh 'python --version'
-                echo "Build: ${VERSION}-${TAG}"
+                script {
+                    s.buld()
+                }
             }
         }
         stage('test') {
