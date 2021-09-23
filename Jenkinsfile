@@ -11,6 +11,11 @@ pipeline {
                 echo "Build: ${VERSION}-${TAG}"
             }
         }
+        stage('test') {
+            steps {
+                echo "testing build ${VERSION}-${TAG}"
+            }
+        }
         stage('deploy') {
             steps {
                 echo "this is the deploy stage"
@@ -23,6 +28,9 @@ pipeline {
         }
         success {
             echo "this only runs when the run is a success"
+        }
+        failure {
+            echo "It seems that the run failed"
         }
     }
 }
