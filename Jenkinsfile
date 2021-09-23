@@ -8,12 +8,12 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh "Build: ${VERSION}-${TAG}"
+                echo "Build: ${VERSION}-${TAG}"
             }
         }
         stage('deploy') {
             steps {
-                sh 'echo "this is the deploy stage"'
+                echo "this is the deploy stage"
             }
         }
     }
