@@ -17,7 +17,7 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                    s.buld()
+                    s.build()
                 }
             }
         }
